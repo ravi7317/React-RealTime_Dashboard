@@ -1,0 +1,76 @@
+﻿.statusCard {
+  min-height: 130px;
+  border-radius: 20px;
+  border: var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 24px;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.statusCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px -18px rgba(22, 36, 60, 0.45);
+}
+
+.statusCard--safe {
+  background: linear-gradient(120deg, rgba(0, 200, 83, 0.16), rgba(255, 255, 255, 0.96));
+}
+
+.statusCard--hazard {
+  background: linear-gradient(120deg, rgba(255, 214, 0, 0.22), rgba(255, 255, 255, 0.96));
+}
+
+.statusCard--toxic {
+  background: linear-gradient(120deg, rgba(213, 0, 0, 0.22), rgba(255, 255, 255, 0.96));
+  animation: statusPulse 1.4s ease-in-out infinite;
+}
+
+.statusIcon {
+  min-width: 86px;
+  height: 56px;
+  border-radius: 12px;
+  border: 1px solid rgba(17, 24, 39, 0.14);
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.9px;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.statusBody {
+  flex: 1;
+}
+
+.statusText {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+}
+
+.statusSub {
+  margin-top: 2px;
+  font-size: 14px;
+  opacity: 0.84;
+}
+
+@keyframes statusPulse {
+  0% {
+    box-shadow: var(--shadow);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(213, 0, 0, 0.1), var(--shadow);
+  }
+  100% {
+    box-shadow: var(--shadow);
+  }
+}
+
+@media (max-width: 900px) {
+  .statusText {
+    font-size: 30px;
+  }
+}

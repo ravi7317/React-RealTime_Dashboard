@@ -1,0 +1,164 @@
+﻿.toxicCard {
+  min-height: 140px;
+  background: var(--card);
+  border: var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 220ms ease;
+}
+
+.toxicCard:hover {
+  transform: translateY(-4px);
+}
+
+.toxicCardLine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 6px;
+}
+
+.toxicCard--safe .toxicCardLine {
+  background: var(--safe);
+}
+
+.toxicCard--hazard .toxicCardLine {
+  background: var(--hazard);
+}
+
+.toxicCard--toxic .toxicCardLine {
+  background: var(--toxic);
+}
+
+.toxicHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.toxicTitle {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.bandPill {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid #e6ecf4;
+}
+
+.bandPill--safe {
+  color: var(--safe);
+}
+
+.bandPill--hazard {
+  color: #9a7b00;
+}
+
+.bandPill--toxic {
+  color: var(--toxic);
+}
+
+.toxicValue {
+  margin-top: 12px;
+  font-size: 42px;
+  font-weight: 900;
+}
+
+.unit {
+  margin-left: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.72;
+}
+
+.bandRow {
+  margin-top: 10px;
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 800;
+  opacity: 0.6;
+}
+
+.bandRow .active {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.barWrap {
+  margin-top: 10px;
+  width: 100%;
+  height: 14px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 200, 83, 0.22) 0%,
+    rgba(0, 200, 83, 0.22) 33.333%,
+    rgba(255, 214, 0, 0.24) 33.333%,
+    rgba(255, 214, 0, 0.24) 66.666%,
+    rgba(213, 0, 0, 0.24) 66.666%,
+    rgba(213, 0, 0, 0.24) 100%
+  );
+  overflow: hidden;
+  position: relative;
+}
+
+.barWrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 33.333%;
+  width: 1px;
+  height: 100%;
+  background: rgba(31, 41, 55, 0.26);
+  box-shadow: calc(33.333% + 1px) 0 0 rgba(31, 41, 55, 0.26);
+  pointer-events: none;
+}
+
+.barFill {
+  height: 100%;
+  background: rgba(31, 41, 55, 0.3);
+  border-radius: 999px;
+  transition: width 340ms ease;
+  position: relative;
+}
+
+.barFill::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translate(50%, -50%);
+  border-radius: 50%;
+  background: #1f2937;
+  border: 2px solid #fff;
+}
+
+.toxicCard--safe .barFill {
+  background: rgba(0, 200, 83, 0.32);
+}
+
+.toxicCard--hazard .barFill {
+  background: rgba(255, 214, 0, 0.42);
+}
+
+.toxicCard--toxic .barFill {
+  background: rgba(213, 0, 0, 0.38);
+}
+
+.rangeNote {
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.75;
+}

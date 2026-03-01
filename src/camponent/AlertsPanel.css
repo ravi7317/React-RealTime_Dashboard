@@ -1,0 +1,81 @@
+﻿.alertsPanel {
+  background: var(--card);
+  border: var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.alertsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.alertsTitle {
+  margin: 0;
+  font-size: 16px;
+}
+
+.alertsStatus {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid #e3e9f2;
+}
+
+.alertsStatus--safe {
+  color: var(--safe);
+}
+
+.alertsStatus--hazard {
+  color: #9a7b00;
+}
+
+.alertsStatus--toxic {
+  color: var(--toxic);
+}
+
+.alertsList {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.alertItem {
+  border-radius: 12px;
+  border: 1px solid #e5ecf4;
+  padding: 8px;
+}
+
+.alertItem--safe {
+  background: rgba(0, 200, 83, 0.08);
+}
+
+.alertItem--hazard {
+  background: rgba(255, 214, 0, 0.13);
+}
+
+.alertItem--toxic {
+  background: rgba(213, 0, 0, 0.12);
+}
+
+.alertTop {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.alertTime {
+  opacity: 0.8;
+}
+
+.alertMsg {
+  margin-top: 3px;
+  font-size: 12px;
+}

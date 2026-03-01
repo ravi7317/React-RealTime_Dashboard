@@ -1,0 +1,90 @@
+﻿.expertPanel {
+  background: var(--card);
+  border: var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.expertHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.expertTitle {
+  margin: 0;
+  font-size: 18px;
+}
+
+.expertHint {
+  margin: 8px 0 0;
+  font-size: 13px;
+  opacity: 0.78;
+}
+
+.expertControls {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 10px;
+}
+
+.unlockRow {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.expertInput,
+.expertSelect {
+  width: 100%;
+  border: 1px solid #d5dfeb;
+  border-radius: 10px;
+  padding: 9px 10px;
+  font: inherit;
+  background: #fff;
+}
+
+.expertButton {
+  border: 1px solid #24466f;
+  color: #1c3553;
+  background: #e9f2ff;
+  border-radius: 10px;
+  padding: 9px 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tableWrap {
+  margin-top: 12px;
+  overflow-x: auto;
+}
+
+.expertTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.expertTable th,
+.expertTable td {
+  border-bottom: 1px solid #e5ecf4;
+  text-align: left;
+  padding: 8px;
+  white-space: nowrap;
+}
+
+.expertTable th {
+  font-weight: 800;
+  background: #f4f8fc;
+}
+
+@media (max-width: 900px) {
+  .expertControls,
+  .unlockRow {
+    grid-template-columns: 1fr;
+  }
+}
